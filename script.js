@@ -295,12 +295,20 @@ console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanut
 
 //Object
 //A.Make a user
-
+let user={
+  name:'Alex',
+  email:'alex@gmail.com',
+  age:1,
+  purchased:[]
+}
 
 //B.Update the user
+user.email="alex1@gmail.com"
+user.age+=1;
+console.log(user);
 
 //C.Adding keys and values
-
+user.location='new york'
 //D. Shopaholic!
 
 //E.Object-within-object
