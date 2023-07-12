@@ -310,20 +310,50 @@ console.log(user);
 //C.Adding keys and values
 user.location='new york'
 //D. Shopaholic!
+user.purchased.push('carbohydrates');
+user.purchased.push('peace of mind');
+user.purchased.push('Merino jodhpurs')
+console.log(user.purchased[2]);
 
 //E.Object-within-object
+user.friend = {
+  name: "Grace Hopper",
+  age: 85,
+  location: "nyc",
+  purchased:[]
+}
 
+console.log(user.friend.name);
+console.log(user.friend.location);
+user.friend.age= 55;
+console.log(user.friend);
+user.friend.purchased.push('The One Ring');
+user.friend.purchased.push('A latte');
+console.log(user.friend.purchased[1]);
 //F.Loops
+for(
+  i=0; i<user.purchased.length; i++){
+
+console.log(user.purchased[i]);    
+  }
+  for(
+    i=0; i<user.friend.purchased.length; i++){
+  
+  console.log(user.friend.purchased[i]);    
+    }
 
 
 //G.Functions can operate on objects
+function updateUser(){
+user.age+=1;
+user.name.toUpperCase(user.name);
+}
 
-//Cat Combinator
-//1. Mama Cat
 
-//2. Papa cat
-
-//3. Combine Cats
-
-//4.Cat brain bender
-
+function oldAndLoud(person){
+  person.user=user;
+  user.age+=1;
+  user.name.toUpperCase(user.name);
+  
+}
+console.log(user);
