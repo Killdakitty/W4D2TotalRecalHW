@@ -264,14 +264,33 @@ console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
 
 //G.maxofThree
 function maxOfThree(x,y,z){
-  maxOfThree.sort(maxOfThree);
+  if (x>y && x>z){
+    return x;
+  }else if (x>y && x<z){
+    return z;  
+  } else {
+    return y
 
-}
+}}
 console.log(maxOfThree(6, 9, 1));
 
 //H.printLoungesWord
-
+//!need to study
+function printLongestWord(items) {
+  let longestWord = '';
+  items.forEach((item) => {
+    const words = item.split(" ");
+    words.forEach((word) => {
+      if (word.length > longestWord.length) {
+        longestWord = word
+      }
+    });
+  });
+  
+  return longestWord;
+ }
 console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
+
 
 
 //Object
